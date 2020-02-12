@@ -1,2 +1,2 @@
 # fruit-picker
-Select our weekly fruit
+Select our weekly fruit for Tine
