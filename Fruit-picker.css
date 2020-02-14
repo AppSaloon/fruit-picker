@@ -1,4 +1,18 @@
+
+
+/*
+body
+{
+	
+}
+*/
 h1
 {
-	color: blue;
+	color: rgba(167, 21, 94, 0.993);
+	background-image: url("logo.jpg");
+	background-repeat: no-repeat;
+	padding-top: 102px;
+	text-shadow: 2px;
+	font-style: oblique;
+	background-size: 140px;
 }
