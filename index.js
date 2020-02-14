@@ -1,11 +1,8 @@
-let orders = [{
-	amount: 2,
-	fruit: 'mango'
-}]
+let orders = []
 
 // generate amount selector
 const amountSelect = document.getElementById("aantal")
-for (var i = 0; i < 10; i++) {
+for (var i = 1; i < 10; i++) {
 	const option = document.createElement("option")
 	option.textContent = i
 	option.value = i
@@ -15,12 +12,8 @@ for (var i = 0; i < 10; i++) {
 // generate fruit selector
 const fruitSelect = document.getElementById("fruit")
 const fruits = ['apple', 'citroen', 'mango']
-console.log(fruits, fruitSelect)
-
 for (const fruit of fruits) {
-	console.log(fruit)
 	const option = document.createElement("option")
-	console.log(option)
 	option.text = fruit
 	option.value = fruit
 	fruitSelect.add(option, null)
@@ -44,7 +37,6 @@ addFruitButton.addEventListener('click', function (e) {
 
 const renderOrderList = () => {
 	const orderList = document.getElementById('orderList')
-	console.dir(orderList)
 	orderList.innerHTML = ""
 	for (const order of orders) {
 		// create deleteButton
@@ -94,3 +86,22 @@ const deleteOrder = (order) => {
 	console.log(orders)
 	renderOrderList()
 }
+
+const sendButton = document.getElementById('send')
+sendButton.addEventListener('click', function (e) {
+	const naamInput = document.getElementById('name')
+	const naam = naamInput.value
+	if (naam === ' ') {
+		return alert('vul uw naam in aub !!')
+	}
+
+	const oderInput = document.getElementById('orderList')
+	const order = oderInput.value
+	// console.log('verzenden')
+	//console.dir(oderInput)
+
+})
+
+
+
+

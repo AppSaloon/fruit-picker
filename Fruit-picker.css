@@ -14,5 +14,17 @@ h1
 	padding-top: 102px;
 	text-shadow: 2px;
 	font-style: oblique;
-	background-size: 140px;
+	background-size: 120px;
+}
+hr
+{
+	color: brown;
+	border-width: 3px;
+	margin-right: auto;
+	margin-left: auto; 
+}
+table
+{
+	width: 100%;
+	border: 1px;
 }
