@@ -1,30 +1,58 @@
 
 
-/*
 body
 {
-	
+	width: 100%;
+	margin-left: 50px;
+	text-align: center;
+	background-color: rgb(71, 89, 122);
+	background-image: url('fruit1.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
-*/
+.card-wrapper {
+	display: flex;
+	justify-content: center;
+}
 h1
 {
-	color: rgba(167, 21, 94, 0.993);
+	color: rgba(224, 243, 55, 0.993);
 	background-image: url("logo.jpg");
 	background-repeat: no-repeat;
 	padding-top: 102px;
 	text-shadow: 2px;
 	font-style: oblique;
-	background-size: 120px;
+	background-size: 100px;
+	font-family:  serif;
 }
 hr
 {
-	color: brown;
-	border-width: 3px;
+	color: white;
+	border-width: 5px;
 	margin-right: auto;
-	margin-left: auto; 
+	margin-left: auto;
 }
-table
+
+#orderList li{
+	list-style: none;
+	text-align: left;
+	height: 28px;
+}
+
+.deletebutton
 {
-	width: 100%;
-	border: 1px;
+	font-size: 10px;
 }
+
+.clickme .deletebutton    /* verberg de delete button op de hele rij van orderItem */
+{
+	display: none;
+}
+
+.clickme:hover .deletebutton  /* met de functie "hover" kunt de delete button verschijnen als de muis er op staat terug */
+{
+	display: inline-block;
+}
+
+
+

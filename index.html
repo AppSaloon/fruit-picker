@@ -2,51 +2,79 @@
 <html langs="nl">
 
 <head>
+	<script src="https://kit.fontawesome.com/694587abb1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="Fruit-picker.css" />
 	<title>Fruit-picker</title>
 </head>
-<h1>Fruit-picker</h1>
-<hr>
 
 <body>
-	<div>
-		<br />
-		<label for='name'>
-			naam:
-			<input type="text" id="name">
-		</label>
-		<br />
-		<div>
-			<label for="aantal">Hoevelheid</label>
-			<select id="aantal">
-				<option>
-					kies
-				</option>
-			</select>
+	<h1>Fruit-picker</h1>
+	<div class="card-wrapper">
+		<div class="card" style="width: 50rem;">
 			<br />
-			<label for="fruit">Fruit:</label>
-			<select id="fruit">
-				<option>
-					kies
-				</option>
-			</select>
+			<p class="card-text">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Invoer</h5>
+								<p class="card-text">
+									<form>
+										<div class=" form row justify-content-center">
+											<div class="col-md-5">
+												<input type="text" class="form-control" placeholder="naam" id='name' />
+											</div>
+										</div>
+									</form>
+									<div>
+										<label for="aantal">Aantal</label>
+										<select id="aantal">
+											<option>
+												kies
+											</option>
+										</select>
+										<br />
+										<label for="fruit">Fruit:</label>
+										<select id="fruit">
+											<option>
+												kies
+											</option>
+										</select>
+									</div>
+									<button id='addFruit' class="btn btn-primary">toevoegen</button>
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<input id="extrafruit" type="text" placeholder="bv: framboos" />
+								<button id="extrafruittoevoegen">fruittoevoegen</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="card">
+							<br />
+							<h5 class="card-title">Jouw bestelling</h5>
+							<div>
+								<ul id='orderList'></ul>
+							</div>
+
+							<div>
+								<button id='send' class="btn btn-success"> verzenden</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</p>
+			<div class="card-footer">
+				<small class="text-muted">Appsaloon</small>
+			</div>
 		</div>
-		<br />
-		<button id='addFruit'>toevoegen</button>
 	</div>
-	<div>
-		<ul id='orderList'></ul>
-	</div>
-	<div>
-		<button id='send'> verzenden</button>
-	</div>
-
 	<script type="text/javascript" src='index.js'></script>
-
-
-
-
-
 </body>
 
 </html>
