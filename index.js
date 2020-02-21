@@ -111,9 +111,26 @@ const sendOrder = (e) => {
 	if (naam === '') {
 		return alert('De naam veld mag niet leg zijn !!')
 	}
-	const data = { naam, orders }
+	const data = { name: naam, orders }
 	console.log(data)
+	const myHeaders = new Headers()
+	myHeaders.append("Content-Type", "application/json");
+	const requestOptions = {
+		method: 'POST',
+		headers: myHeaders,
+		body: JSON.stringify(data),
+		redirect: 'follow'
+	};
+	fetch("https://scripts.appsaloon.be/api/fruitRequest", requestOptions)
+		.then(response => response.text())
+		.then(result => {
+			orders = []
+			alert(result)
+			console.log(result)
+		})
+		.catch(error => console.log('error', error))
 }
+
 const addFruitButton = document.getElementById('addFruit')
 addFruitButton.addEventListener('click', function (e) {
 	const amount = amountSelect.value
@@ -133,6 +150,7 @@ addFruitButton.addEventListener('click', function (e) {
 
 const sendButton = document.getElementById('send')
 sendButton.addEventListener('click', sendOrder)
+
 
 /* FRUIT */
 const fruittoevoegenButton = document.getElementById('extrafruittoevoegen')
